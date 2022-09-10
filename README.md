@@ -1,5 +1,7 @@
 # KiVP
 
+<a href="https://kitashi14.github.io/KiVP/" target="blank">Open</a>
+
 ## Description
 
 A web app for using browser as a video player.
