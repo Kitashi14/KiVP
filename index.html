@@ -6,13 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Player</title>
     <link rel="shorcut icon" href="./src/favicon.png" />
+    <link rel="stylesheet" href="./style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Kurale&family=Laila:wght@300;500&family=Lalezar&family=Lato:ital,wght@0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="main_container">
-      <input id="videoInput" type="file" accept="video/*,video/x-matroska" />
-
-      <video id="videoSrc" width="1510px" height="650px" type="video/mp4" controls>
-      </video>
+        <header>
+            <div class="header">
+                <div class="logo"></div>
+                <span class="title"><span>Video Player</span><input id="videoInput" type="file" accept="video/*,video/x-matroska" title="Select" /> <label class="inputLabel" for="videoInput">Select File</label></span>
+                <div class="none"></div>
+                
+              </div>
+        </header>
+        <br>
+        <div class="headingContainer">
+            <span class="heading">Choose a Video</span>
+          </div>
+          <br>
+          <div class="videoPlayer">
+            <video id="videoSrc"  type="video/mp4" controls>
+            </video>
+          </div>
+      
     </div>
 
     <script>
