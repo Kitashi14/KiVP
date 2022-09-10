@@ -1,6 +1,6 @@
 # KiVP
 
-<a href="https://kitashi14.github.io/KiVP/" target="blank">Open</a>
+<a href="https://kitashi14.github.io/KiVP/" target="_blank">Open</a>
 
 ## Description
 
