@@ -1,13 +1,11 @@
 body {
   background: linear-gradient(180deg, #580202 0%, #000000 100%);
-}
-
-.main_container {
-  height: 97.7vh;
+  background-attachment:fixed;
+  height: 100%;
 }
 
 header {
-  position: sticky;
+  position:static;
   flex: auto;
   flex-direction: row;
   top: 0vh;
@@ -72,7 +70,7 @@ header {
   height: 57px;
   display: flex;
   justify-content: center;
-  font-family: 'Lalezar';
+  font-family: "Lalezar";
   align-items: center;
   font-size: 5vh;
   text-align: center;
@@ -97,42 +95,38 @@ header {
   box-shadow: none;
 }
 .heading {
-    
-    position:relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
-    font-family: 'Laila';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 4vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    display: flex;
-    align-items: center;
-    text-align: center;
+  font-family: "Laila";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vh;
 
-    color: #FE720C;
-    /* color: white; */
-    background-color: transparent;
-    text-decoration-line: underline;
+  color: #fe720c;
+  /* color: white; */
+  background-color: transparent;
+  text-decoration-line: underline;
+  overflow-wrap: break-word;
+  /* white-space:nowrap; */
+  /* text-overflow: ellipsis; */
 }
 
-#videoSrc{
-    height: 60vh;
-    width: 100vh;
-    
+#videoSrc {
+  height: 60vh;
+  width: 100vh;
 }
 
-.videoPlayer{
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1vh 1vh;
-    width: 110vh;
-    border: solid 5px rgb(102, 11, 1);
-    border-radius: 20px;
-
+.videoPlayer {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 1vh;
+  width: 110vh;
+  border: solid 5px rgb(102, 11, 1);
+  border-radius: 20px;
 }

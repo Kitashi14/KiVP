@@ -6,51 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Player</title>
     <link rel="shorcut icon" href="./src/favicon.png" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Acme&family=Kurale&family=Laila:wght@300;500&family=Lalezar&family=Lato:ital,wght@0,400;0,700;1,300&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="main_container">
-        <header>
-            <div class="header">
-                <div class="logo"></div>
-                <span class="title"><span>Video Player</span><input id="videoInput" type="file" accept="video/*,video/x-matroska" title="Select" /> <label class="inputLabel" for="videoInput">Select File</label></span>
-                <div class="none"></div>
-                
-              </div>
-        </header>
-        <br>
-        <div class="headingContainer">
-            <span class="heading">Choose a Video</span>
-          </div>
-          <br>
-          <div class="videoPlayer">
-            <video id="videoSrc"  type="video/mp4" controls>
-            </video>
-          </div>
-      
+    <div >
+      <header>
+        <div class="header">
+          <div class="logo"></div>
+          <span class="title"
+            ><span>Video Player</span
+            ><input
+              id="videoInput"
+              type="file"
+              accept="video/*,video/x-matroska"
+              title="Select"
+            />
+            <label class="inputLabel" for="videoInput">Select File</label></span
+          >
+          <div class="none"></div>
+        </div>
+      </header>
+      <br />
+      <div class="headingContainer">
+        <span class="heading">Choose a Video</span>
+      </div>
+      <br />
+      <div class="videoPlayer">
+        <video id="videoSrc" type="video/mp4" controls></video>
+      </div>
     </div>
 
     <script>
       const input = document.querySelector("#videoInput");
       const video = document.querySelector("#videoSrc");
+      const heading = document.querySelector(".heading");
 
-      const setVideoSrc = (url) => {
+      const setVideoSrc = (url, filename) => {
         video.src = url;
+        heading.textContent = filename;
       };
-      const setUrl = (file) => {
+      const setUrl = (file, filename) => {
         const url = window.URL.createObjectURL(file);
         console.log(url);
-        setVideoSrc(url);
+        setVideoSrc(url, filename);
       };
       input.addEventListener("change", (e) => {
         const file = e.target.files[0];
+
+        if (e.target.files[0].type == "video/x-matroska") {
+            alert("MKV files may or may not run properly :'(")
+        }
         // console.log(file);
         console.log(file.name);
-        setUrl(file);
+        setUrl(file, file.name);
       });
     </script>
   </body>
