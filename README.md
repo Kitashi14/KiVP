@@ -12,7 +12,7 @@ A web app for using browser as a video player.
   2. CSS
   3. Javascript
  
-## Scrennshots 
+## Screenshots 
   
   <p align="center">
   <img src ="src/Screenshots/Screenshot (789).png" width="350" title="Upload">
